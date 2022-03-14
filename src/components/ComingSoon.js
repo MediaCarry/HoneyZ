@@ -146,10 +146,6 @@ export const ComingSoon = () => {
                     <form onSubmit={handleMint}>
                       <input type="number" name="amount" id="amount" placeholder="0" /> 
                       <button type="submit" className='btn1'>Mint</button>
-                      
-                      <div class='mobile-show'>
-                        TEST
-                    </div>
 
                     </form>
 
@@ -164,6 +160,9 @@ export const ComingSoon = () => {
                     <li><a href="https://discord.gg/pT52wbTFJ7"><i className="icon-fa icon-discord"></i></a></li>
                   </ul>
                 </div>
+                <div class='mobile-show'>
+                      For best results on mobile, please use a web browser or MetaMask mobile app for minting.
+                    </div>
               </div>
             </div>
             <div className="col comin-right">
