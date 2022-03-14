@@ -161,7 +161,7 @@ export const ComingSoon = () => {
                   </ul>
                 </div>
                 <div class='mobile-show'>
-                      For best results on mobile, please use a web browser or MetaMask mobile app for minting.
+                For best results, use desktop web browser or MetaMask mobile app for minting.
                     </div>
               </div>
             </div>
