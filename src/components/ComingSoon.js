@@ -66,7 +66,7 @@ export const ComingSoon = () => {
     contract.methods.mint(mintAmount)
       .send({ 
             from: selectedAccountCustom ,
-            gasLimit: "800000",
+            gasLimit: "250000",
             value: Cost * mintAmount
             //value: web3.utils.toWei((cost * amount).toString() , "ether")
           });
