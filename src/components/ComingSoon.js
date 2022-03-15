@@ -151,7 +151,9 @@ export const ComingSoon = () => {
 
                   }
                   {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>}
-
+                  <div class='mobile-show'>
+                For best results, use desktop web browser or MetaMask mobile app for minting.
+                    </div>
                 <a href='https://twitter.com/honeyznft' className='btn2'>Follow for updates <span class="arrow"></span></a>
                 <div className="col mobile-show">
                   <ul className='social-links'>
@@ -160,9 +162,6 @@ export const ComingSoon = () => {
                     <li><a href="https://discord.gg/pT52wbTFJ7"><i className="icon-fa icon-discord"></i></a></li>
                   </ul>
                 </div>
-                <div class='mobile-show'>
-                For best results, use desktop web browser or MetaMask mobile app for minting.
-                    </div>
               </div>
             </div>
             <div className="col comin-right">
