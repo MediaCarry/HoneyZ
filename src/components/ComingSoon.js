@@ -49,44 +49,44 @@ export const ComingSoon = () => {
   // }
  
   
-  useEffect(() => {
-    handleAccounts();
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-    }
-  }, []);
+  // useEffect(() => {
+  //   handleAccounts();
+  //   window.addEventListener('resize', handleWindowSizeChange);
+  //   return () => {
+  //       window.removeEventListener('resize', handleWindowSizeChange);
+  //   }
+  // }, []);
 
-  const openMetaMask = async (mintAmount) => {
-    //alert(mintAmount);
-    //handleAccounts();
-    let accounts = await web3.eth.getAccounts();
-    let selectedAccountCustom = accounts[0];
-    let Cost = await contract.methods.cost().call();
-    //let mintAmount = 1;
-    contract.methods.mint(mintAmount)
-      .send({ 
-            from: selectedAccountCustom ,
-            gasLimit: "800000",
-            value: Cost * mintAmount
-            //value: web3.utils.toWei((cost * amount).toString() , "ether")
-          });
-  }
+  // const openMetaMask = async (mintAmount) => {
+  //   //alert(mintAmount);
+  //   //handleAccounts();
+  //   let accounts = await web3.eth.getAccounts();
+  //   let selectedAccountCustom = accounts[0];
+  //   let Cost = await contract.methods.cost().call();
+  //   //let mintAmount = 1;
+  //   contract.methods.mint(mintAmount)
+  //     .send({ 
+  //           from: selectedAccountCustom ,
+  //           gasLimit: "800000",
+  //           value: Cost * mintAmount
+  //           //value: web3.utils.toWei((cost * amount).toString() , "ether")
+  //         });
+  // }
 
-  const handleMint = (event) => {
-		event.preventDefault();
-		const { amount } = event.target.elements;
-		if(isNaN(amount.value))
-		{
-			return alert("Please enter a number only");
-		}
-		if(amount.value > 120)
-		{
-			return alert("Please mint less than 5 nfts at a time");
-		}
+  // const handleMint = (event) => {
+	// 	event.preventDefault();
+	// 	const { amount } = event.target.elements;
+	// 	if(isNaN(amount.value))
+	// 	{
+	// 		return alert("Please enter a number only");
+	// 	}
+	// 	if(amount.value > 120)
+	// 	{
+	// 		return alert("Please mint less than 5 nfts at a time");
+	// 	}
 
-		openMetaMask(amount.value);
-	}
+	// 	openMetaMask(amount.value);
+	// }
 
   var settings = {
     dots: false,
