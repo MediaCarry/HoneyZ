@@ -13,8 +13,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// import Web3 from 'web3';
-// import { CONTRACT_ADDRESS , CONTRACT_ABI } from '../config';
+import Web3 from 'web3';
+import { CONTRACT_ADDRESS , CONTRACT_ABI } from '../config';
 
 export const ComingSoon = () => {
   const [width, setWidth] = useState(window.innerWidth);
