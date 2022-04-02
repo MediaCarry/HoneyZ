@@ -151,7 +151,7 @@ export const ComingSoon = () => {
                     </form>
 
                   } */}
-                  {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>}
+                  {/* {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} */}
                   <div class='mobile-show'>
                 For best results, use desktop web browser or MetaMask mobile app for minting.
                     </div>
