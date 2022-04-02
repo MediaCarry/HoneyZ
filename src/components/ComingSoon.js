@@ -28,25 +28,25 @@ export const ComingSoon = () => {
   }
 
   //metamask integration
-  async function handleAccounts()
-  {
-    const accounts = await window.ethereum.request({
-      method: "eth_requestAccounts",
-    });
-    //console.log(accounts[0]);
-    if(accounts[0])
-    {
-      setAccountCoonected(true);
-    }
-    const networkId = await window.ethereum.request({
-      method: "net_version",
-    });
-    if(networkId != 1)
-    {
-      alert("Please connect your wallet with Ethereum Mainnet");
-    }
-    //console.log(networkId);
-  }
+  // async function handleAccounts()
+  // {
+  //   const accounts = await window.ethereum.request({
+  //     method: "eth_requestAccounts",
+  //   });
+  //   //console.log(accounts[0]);
+  //   if(accounts[0])
+  //   {
+  //     setAccountCoonected(true);
+  //   }
+  //   const networkId = await window.ethereum.request({
+  //     method: "net_version",
+  //   });
+  //   if(networkId != 1)
+  //   {
+  //     alert("Please connect your wallet with Ethereum Mainnet");
+  //   }
+  //   //console.log(networkId);
+  // }
  
   
   useEffect(() => {
