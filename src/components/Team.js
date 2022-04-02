@@ -70,17 +70,6 @@ export const Team = () => {
           <div class="col">
             <div class="team-grid">
               <div class="team-img">
-                <img src={image10} alt="No image" />
-              </div>
-              <div class="team-title">
-                <h3>Idalis</h3>
-                <p>Marketing &amp; Moderator</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="team-grid">
-              <div class="team-img">
                 <img src={image8} alt="No image" />
               </div>
               <div class="team-title">
