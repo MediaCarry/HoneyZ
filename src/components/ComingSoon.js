@@ -47,6 +47,7 @@ export const ComingSoon = () => {
     }
     //console.log(networkId);
   }
+ 
   
   useEffect(() => {
     handleAccounts();
@@ -140,7 +141,7 @@ export const ComingSoon = () => {
                   {/* {accountCoonected && <button className='btn1' onClick={openMetaMask}>Mint NFT</button>}
                   {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} */}
 
-                  {
+                  {/* {
                     accountCoonected 
                     && 
                     <form onSubmit={handleMint}>
@@ -149,12 +150,12 @@ export const ComingSoon = () => {
 
                     </form>
 
-                  }
+                  } */}
                   {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>}
                   <div class='mobile-show'>
                 For best results, use desktop web browser or MetaMask mobile app for minting.
                     </div>
-                <a href='https://twitter.com/honeyznft' className='btn2'>Follow for updates <span class="arrow"></span></a>
+                <a href='https://twitter.com/honeyznft' className='btn2'>Follow for presale updates <span class="arrow"></span></a>
                 <div className="col mobile-show">
                   <ul className='social-links'>
                     <a href='https://twitter.com/honeyznft'><li><i className="icon-fa icon-twitter"></i></li></a>
