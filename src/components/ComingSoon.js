@@ -27,66 +27,66 @@ export const ComingSoon = () => {
     setWidth(window.innerWidth);
   }
 
-  //metamask integration
-  // async function handleAccounts()
-  // {
-  //   const accounts = await window.ethereum.request({
-  //     method: "eth_requestAccounts",
-  //   });
-  //   //console.log(accounts[0]);
-  //   if(accounts[0])
-  //   {
-  //     setAccountCoonected(true);
-  //   }
-  //   const networkId = await window.ethereum.request({
-  //     method: "net_version",
-  //   });
-  //   if(networkId != 1)
-  //   {
-  //     alert("Please connect your wallet with Ethereum Mainnet");
-  //   }
-  //   //console.log(networkId);
-  // }
+  metamask integration
+  async function handleAccounts()
+  {
+    const accounts = await window.ethereum.request({
+      method: "eth_requestAccounts",
+    });
+    //console.log(accounts[0]);
+    if(accounts[0])
+    {
+      setAccountCoonected(true);
+    }
+    const networkId = await window.ethereum.request({
+      method: "net_version",
+    });
+    if(networkId != 1)
+    {
+      alert("Please connect your wallet with Ethereum Mainnet");
+    }
+    //console.log(networkId);
+  }
  
   
-  // useEffect(() => {
-  //   handleAccounts();
-  //   window.addEventListener('resize', handleWindowSizeChange);
-  //   return () => {
-  //       window.removeEventListener('resize', handleWindowSizeChange);
-  //   }
-  // }, []);
+  useEffect(() => {
+    handleAccounts();
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
 
-  // const openMetaMask = async (mintAmount) => {
-  //   //alert(mintAmount);
-  //   //handleAccounts();
-  //   let accounts = await web3.eth.getAccounts();
-  //   let selectedAccountCustom = accounts[0];
-  //   let Cost = await contract.methods.cost().call();
-  //   //let mintAmount = 1;
-  //   contract.methods.mint(mintAmount)
-  //     .send({ 
-  //           from: selectedAccountCustom ,
-  //           gasLimit: "800000",
-  //           value: Cost * mintAmount
-  //           //value: web3.utils.toWei((cost * amount).toString() , "ether")
-  //         });
-  // }
+  const openMetaMask = async (mintAmount) => {
+    //alert(mintAmount);
+    //handleAccounts();
+    let accounts = await web3.eth.getAccounts();
+    let selectedAccountCustom = accounts[0];
+    let Cost = await contract.methods.cost().call();
+    //let mintAmount = 1;
+    contract.methods.mint(mintAmount)
+      .send({ 
+            from: selectedAccountCustom ,
+            gasLimit: "800000",
+            value: Cost * mintAmount
+            //value: web3.utils.toWei((cost * amount).toString() , "ether")
+          });
+  }
 
-  // const handleMint = (event) => {
-	// 	event.preventDefault();
-	// 	const { amount } = event.target.elements;
-	// 	if(isNaN(amount.value))
-	// 	{
-	// 		return alert("Please enter a number only");
-	// 	}
-	// 	if(amount.value > 120)
-	// 	{
-	// 		return alert("Please mint less than 5 nfts at a time");
-	// 	}
+  const handleMint = (event) => {
+		event.preventDefault();
+		const { amount } = event.target.elements;
+		if(isNaN(amount.value))
+		{
+			return alert("Please enter a number only");
+		}
+		if(amount.value > 120)
+		{
+			return alert("Please mint less than 5 nfts at a time");
+		}
 
-	// 	openMetaMask(amount.value);
-	// }
+		openMetaMask(amount.value);
+	}
 
   var settings = {
     dots: false,
@@ -138,10 +138,10 @@ export const ComingSoon = () => {
                   and crypto while expressing self confidence
                   through a unique sense of fashion.</p>
 
-                  {/* {accountCoonected && <button className='btn1' onClick={openMetaMask}>Mint NFT</button>}
-                  {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} */}
+                   {accountCoonected && <button className='btn1' onClick={openMetaMask}>Mint NFT</button>}
+                  {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} 
 
-                  {/* {
+                  {
                     accountCoonected 
                     && 
                     <form onSubmit={handleMint}>
@@ -150,8 +150,8 @@ export const ComingSoon = () => {
 
                     </form>
 
-                  } */}
-                  {/* {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} */}
+                  } 
+                   {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} 
                   <div class='mobile-show'>
                 For best results, use desktop web browser or MetaMask mobile app for minting.
                     </div>
