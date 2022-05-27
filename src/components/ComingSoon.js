@@ -27,7 +27,7 @@ export const ComingSoon = () => {
     setWidth(window.innerWidth);
   }
 
-  metamask integration
+  //metamask integration
   async function handleAccounts()
   {
     const accounts = await window.ethereum.request({
