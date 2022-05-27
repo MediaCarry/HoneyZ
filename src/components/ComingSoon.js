@@ -138,8 +138,7 @@ export const ComingSoon = () => {
                   and crypto while expressing self confidence
                   through a unique sense of fashion.</p>
 
-                   {accountCoonected && <button className='btn1' onClick={openMetaMask}>Mint NFT</button>}
-                  {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} 
+                  {accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} 
 
                   {
                     accountCoonected 
@@ -151,7 +150,7 @@ export const ComingSoon = () => {
                     </form>
 
                   } 
-                   {!accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} 
+                   {accountCoonected && <button className='btn1' onClick={handleAccounts}>Connect Wallet</button>} 
                   <div class='mobile-show'>
                 For best results, use desktop web browser or MetaMask mobile app for minting.
                     </div>
